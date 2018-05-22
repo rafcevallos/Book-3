@@ -1,0 +1,32 @@
+{
+  "food": [
+    {
+      "id": 1,
+      "name": "sushi",
+      "type": "seafood",
+      "ethnicity": "Japanese",
+      "sideDishes": "seaweed salad"
+    },
+    {
+      "id": 2,
+      "name": "Galbi",
+      "type": "meat",
+      "ethnicity": "Korean",
+      "sideDishes": "kimchee"
+    },
+    {
+      "id": 3,
+      "name": "saag paneer",
+      "type": "vegetarian",
+      "ethnicity": "Indian",
+      "sideDishes": "garlic naan"
+    },
+    {
+      "id": "4",
+      "name": "Ice Cream",
+      "type": "dessert",
+      "ethnicity": "Da World",
+      "sideDishes": "Nuts"
+    }
+  ]
+}

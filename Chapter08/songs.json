@@ -1,0 +1,24 @@
+{
+    "songs": [
+      {
+        "title": "Humble",
+        "artist": "Kendrick Lamar",
+        "album": "DAMN."
+      },
+      {
+        "title": "Cold War",
+        "artist": "Janelle Monae",
+        "album": "Archandroid"
+      },
+      {
+        "title": "Once In A Lifetime",
+        "artist": "Talking Heads",
+        "album": "Remain In Light"
+      },
+      {
+        "title": "Hunger",
+        "artist": "Bjork",
+        "album": "Homogenic"
+      }
+    ]
+  }

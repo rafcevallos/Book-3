@@ -1,0 +1,122 @@
+/* Create a navigation bar out of an unordered list element, and add the following interactivity.
+
+1. When the user hovers over one of the links, the color of the text should change.
+
+2. When the user hovers over one of the links, the background color of the element that contains the link should change.
+
+3. When the user clicks on one of the links, the element that contains the link should grow in size by 5px on the left and right. */
+
+/* Navigation bar */
+   nav {
+    width: 100%;
+    background: lightseagreen;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 15px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20 0 20;
+    transition: .5x;
+  }
+  
+  a:link, a:visited {
+    display: block;
+    padding: 15px 30px;
+    background-color: lightseagreen;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+  }
+  a:hover {
+    background-color: darkmagenta;
+    color: black;
+    font-weight: bolder;
+  }
+
+  a:active {
+      margin: 0px 5px;
+  }
+
+
+/* Currently, the <li> items are block level elements. Add correct styles to remove the bullets and display them as inline elements. */
+.block {
+    list-style: none;
+    display: inline;
+}
+
+
+/* The three <span> elements should be displayed as block elements with a 1 pixel border and 25 pixel margin on all sides. */
+.inline {
+    display: block;
+    border: 1px dotted black;
+    margin: 25px;
+}
+
+
+/* In the article element with the class n-child, add a 1 pixel border around every even numbered section element. */
+.n-child :nth-of-type(2n) {
+    border: 1px dashed purple;
+  }
+
+
+/* Change the top ul content to be displayed inline, with a comma between the three numbers. */
+.top li:not(:last-child):after {
+    content: ", ";
+    }
+
+
+/* In the article element with the class n-type, make each odd section's font color blue. */
+.n-type section:nth-of-type(odd) {
+    color: blue;
+}
+
+
+/* In the article element with the class first-of-type, make the first aside element's background color lime. */
+.first-of-type aside:nth-of-type(odd) {
+    background-color: lime;
+}
+
+/* In the article element with the class first-of-type, make the first section element's background color purple. */
+.first-of-type section:first-of-type {
+    background-color: purple;
+}
+
+/* In the article element with the class three, give each section a background color of orange. */
+.three section {
+    background-color: orange;
+}
+
+/* In the article element with the class three, give the first child element, regardless of type, a background color of goldenrod. */
+.three :first-of-type {
+    background-color: goldenrod;
+}
+
+/* In the article element with the class three, give the last child element, regardless of type, a background color of darkslategray. */
+.three :last-of-type {
+    background-color: darkslategray;
+}
+
+/* Give each article element a title of "Article parent element", a dashed gray border, and a background color of royalblue. Also ensure that it spans the entire length of the document. */
+article:before {
+    content: "Article Parent Element";
+    border: 1px dashed grey;
+    background-color: royalblue;
+    display: block;
+}
+
+
+body {
+    background-color: lightpink;
+}
