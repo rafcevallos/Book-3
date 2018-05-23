@@ -1,5 +1,5 @@
 // JSON files have to be in strings
-
+// Customers is a database of an OBJECT comprised of ARRAYS that contains OBJECTS with ARRAYS
 const customers = {
     "customers": [
         {
@@ -248,13 +248,29 @@ const customers = {
 // From that object extract just the customers' email addresses and store them in a new array.
 // You will need to use methods such as map(), forEach() and/or concat() to accomplish this.
 
-const emailArray = customers.map(emailAddresses => {
-return `${emailAddresses.contacts.email}`
+// Empty Array to push emails from .map
+let emailAddresses = []
+
+/* Target the database to filter data for email addresses
+.map() can only filter through a traditional ARRAY, so you need to target the array within the database.
+In this case, customers is an array within an object named customers (yeah it's confusing)
+emails are in an array within an object named Contacts */
+
+customers.customers.map(e => {
+    emailAddresses = emailAddresses.concat(e.contacts.email)
+})
+console.log(emailAddresses)
+
+
+// STRETCH GOAL - Push all the emails to the DOM
+// HTML Anchor for Emails
+emailAnchor = document.querySelector("#emails")
+
+// loop through array with forEach then create elements
+emailAddresses.forEach(p => {
+    const emailSection = document.createElement("section")
+    emailSection.textContent = p
+    emailAnchor.appendChild(emailSection)
 })
 
-console.log(emailArray)
-
-
-// customers.forEach(currentCustomer => {
-//     currentCustomer.contacts.email.forEach(currentEmail => )
-// })
+// HOLY CRAP!  I DID IT WITHIN 5 MINUTES!!

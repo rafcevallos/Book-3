@@ -7,7 +7,7 @@ const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uran
 */
 const planetEl = document.getElementById("planets")
 
-planets.forEach(function(planetElements) {
+planets.forEach(planetElements => {
     const planetSection = document.createElement("section")
     planetSection.textContent = `${planetElements}`
     planetEl.appendChild(planetSection)
@@ -20,7 +20,7 @@ planets.forEach(function(planetElements) {
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 */
-    const newArray = planets.map(function (planetElements) {
+    const newArray = planets.map(planetElements => {
         return planetElements.charAt(0).toUpperCase() + planetElements.slice(1)
         })
 
@@ -40,7 +40,7 @@ planets.forEach(function(planetElements) {
 // Use the reduce method to create a sentence from the words in the following array
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 
-const sentence = words.reduce(function(previous, current) {
+const sentence = words.reduce((previous, current) => {
   return previous + " " + current
 }, '')
 

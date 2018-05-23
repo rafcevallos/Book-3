@@ -1083,7 +1083,7 @@ const profit = sales.reduce(addProfit, 0).toLocaleString('en-us', { style: 'curr
 profit
 
 
-// 1. In which month did they sell the most cars?
+// 2. In which month did they sell the most cars?
 const ledger = sales.reduce((ledger, sale) => {
     const month = new Date(sale.purchase_date).getMonth()
     if (!ledger.has(month)) {
@@ -1118,7 +1118,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 console.log(`The top selling month was ${months[[...ledger.entries()].sort(mapSort).shift()[0] - 1]}`)
 
 
-// 1. Which salesperson sold the most cars?
+// 3. Which salesperson sold the most cars?
 const reps = sales.reduce((l, s) => {
     const key = `${s.sales_agent.first_name} ${s.sales_agent.last_name}`
 
@@ -1155,7 +1155,7 @@ in 2017`
 output
 
 
-// 1. Which model was the most popular?
+// 5. Which model was the most popular?
 const models = sales.reduce((l, s) => {
     const key = s.vehicle.model
 
@@ -1179,10 +1179,10 @@ modelOutput
 
 
 
-// 1. Which bank provided the most loans to our customers?
+// 6. Which bank provided the most loans to our customers?
 // aka which Bank is repeated the most
 
-// Map() takes the least amountn of memory and is the leanest method
+// Map() takes the least amount of memory and is the LEANEST method
 
 const banks = sales.reduce((banks, sale) => {
     const currentKey = sale.credit.credit_provider
