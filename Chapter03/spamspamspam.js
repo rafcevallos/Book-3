@@ -1,5 +1,7 @@
 // JSON files have to be in strings
-// Customers is a database of an OBJECT comprised of ARRAYS that contains OBJECTS with ARRAYS
+
+// Customers is a database of an OBJECT comprised of ARRAYS that contains OBJECTS with ARRAYS.  
+// ALL of the methods used in this chapter only apply to ARRAYS, so you must target the array within objects
 const customers = {
     "customers": [
         {
@@ -253,12 +255,15 @@ let emailAddresses = []
 
 /* Target the database to filter data for email addresses
 .map() can only filter through a traditional ARRAY, so you need to target the array within the database.
+
 In this case, customers is an array within an object named customers (yeah it's confusing)
+
 emails are in an array within an object named Contacts */
 
 customers.customers.map(e => {
     emailAddresses = emailAddresses.concat(e.contacts.email)
 })
+// log email addresses
 console.log(emailAddresses)
 
 
@@ -269,7 +274,7 @@ emailAnchor = document.querySelector("#emails")
 // loop through array with forEach then create elements
 emailAddresses.forEach(p => {
     const emailSection = document.createElement("section")
-    emailSection.textContent = p
+    emailSection.textContent = 
     emailAnchor.appendChild(emailSection)
 })
 

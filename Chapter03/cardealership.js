@@ -1071,8 +1071,8 @@ const sales = [
         }
     }
 ]
+// everything here is Steve's code and I don't know what it does really.
 
-// 
 const addProfit = (f, s) => f + s.gross_profit
 const mapSort = (c, p) => p[1] - c[1]
 
